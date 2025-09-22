@@ -24,7 +24,8 @@ logger = logging.getLogger(__name__)
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["myrefera.com", "*.myrefera.com"],
+    allow_origins=["http://localhost", "http://localhost:3000", "http://127.0.0.1", "http://127.0.0.1:3000"],
+    allow_origin_regex=r"https?:\/\/([a-z0-9-]+\.)*myrefera\.com",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
