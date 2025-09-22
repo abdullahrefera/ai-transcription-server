@@ -8,6 +8,7 @@ import time
 import logging
 import asyncio
 from datetime import datetime
+from config import settings
 
 # Import our AI service and models
 from models import AITailoringRequest, AITailoringResponse, ErrorResponse, ProductScraperRequest, ProductScraperResponse
@@ -30,7 +31,7 @@ app.add_middleware(
 )
 
 # Initialize services
-supadata = Supadata(api_key=os.getenv("SUPADATA_API_KEY"))
+supadata = Supadata(api_key=settings.SUPADATA_API_KEY)
 ai_service = AIScriptTailoringService()
 scraper_service = ProductScraperService()
 

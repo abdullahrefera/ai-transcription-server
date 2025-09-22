@@ -6,6 +6,7 @@ load_dotenv()
 class Settings:
     # OpenAI Configuration
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY")
+    SUPADATA_API_KEY: str = os.getenv("SUPADATA_API_KEY")
     OPENAI_MODEL: str = "gpt-4.1-mini"  # Only use GPT-4.1-mini
     
     # Performance optimization settings for sub-10-second responses
